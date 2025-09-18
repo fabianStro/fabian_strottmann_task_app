@@ -3,12 +3,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:task_app/solutions/solutions.dart';
 
 void main() {
-  testWidgets(
-      'Should display a non-empty string when "Name anzeigen" button is pressed',
-      (WidgetTester tester) async {
+  testWidgets('Should display a non-empty string when "Name anzeigen" button is pressed', (WidgetTester tester) async {
     await tester.pumpWidget(
       const MaterialApp(
-        home: S4523(),
+        home: MyNameWidget(),
       ),
     );
 
