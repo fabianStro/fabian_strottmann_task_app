@@ -16,16 +16,16 @@ class MyNameWidget extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<MyNameWidget> {
-  String name = '';
+  String _name = '';
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(name),
+        Text(_name),
         ElevatedButton(
           onPressed: () {
             setState(() {
-              name = 'Fabian';
+              _name = 'Fabian';
             });
           },
           child: Text('Name anzeigen'),

@@ -16,27 +16,27 @@ class ShowHideNameWidget extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<ShowHideNameWidget> {
-  String name = '';
-  String buttonName = 'Name anzeigen';
+  String _name = '';
+  String _buttonName = 'Name anzeigen';
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(name),
+        Text(_name),
         ElevatedButton(
           onPressed: () {
             setState(() {
-              if (name == '') {
-                name = 'Fabian';
-                buttonName = 'Name verstecken';
+              if (_name == '') {
+                _name = 'Fabian';
+                _buttonName = 'Name verstecken';
               } else {
-                name = '';
-                buttonName = 'Name anzeigen';
+                _name = '';
+                _buttonName = 'Name anzeigen';
               }
             });
           },
-          child: Text(buttonName),
+          child: Text(_buttonName),
         ),
       ],
     );
