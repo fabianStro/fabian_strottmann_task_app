@@ -19,6 +19,8 @@ class Aufg_4536 extends StatelessWidget {
     Product(name: 'Cola', price: 1.39)
   ];
 
+  // icon: Icons.shopping-cart
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -26,6 +28,7 @@ class Aufg_4536 extends StatelessWidget {
       itemCount: productDescription.length,
       itemBuilder: (context, index) {
         return ListTile(
+          leading: Icon(Icons.shopping_cart),
           title: Text(productDescription[index].name),
           subtitle: Text(productDescription[index].price.toString()),
         ); // ListTile
